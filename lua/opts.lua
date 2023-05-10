@@ -7,7 +7,9 @@ opt.number = true                -- bool: Show line numbers
 opt.relativenumber = true        -- bool: Show relative line numbers
 opt.scrolloff = 4                -- int:  Min num lines of context
 opt.signcolumn = "yes"           -- str:  Show the sign column
-opt.colorcolumn = '55555'
+--opt.colorcolumn = '55555'
+opt.mouse = "a"                  -- str: enable mouse
+opt.clipboard = "unnamedplus"    -- str: sync clipboard with os
 
 -- [[ Filetypes ]]
 opt.encoding = 'utf8'            -- str:  String encoding to use
@@ -32,4 +34,11 @@ opt.tabstop = 4                  -- num:  Number of spaces tabs count for
 opt.splitright = true            -- bool: Place new window to right of current one
 opt.splitbelow = true            -- bool: Place new window below the current one
 
+-- [[ update time ]]
+opt.updatetime = 250
+opt.timeout = true
+opt.timeoutlen = 300
+
+-- [[ completion ]]
+opt.completeopt = "menuone,noselect"
 

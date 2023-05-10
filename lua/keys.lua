@@ -39,10 +39,16 @@ nkeymap('<F12>', '<cmd>syntax sync fromstart<CR>')
 nkeymap('<m-r>', '<cmd>source $MYVIMRC<CR>')
 
 -- nvim-tree
-nkeymap('n', ':NvimTreeToggle<CR>')
+nkeymap('<c-n>', ':NvimTreeToggle<CR>')
 
 -- telescope
 -- fuzzyfinding
 nkeymap('<m-p>', '<cmd>Telescope find_files<cr>')
 nkeymap('<m-g>', '<cmd>Telescope live_grep<cr>')
 nkeymap('<m-b>', '<cmd>Telescope buffers<cr>')
+
+-- Map Ctrl-J in insert mode to accept Copilot suggestions
+vim.api.nvim_set_keymap('i', '<m-TAB>', 'v:lua.require\'copilot\'.Accept("<CR>")', {expr = true, silent = true})
+
+-- Set the Copilot no tab map option
+vim.g.copilot_no_tab_map = true

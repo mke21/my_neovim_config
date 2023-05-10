@@ -17,6 +17,12 @@ require('plugin')    -- Plugins
 -- PLUGINS: Add this section
 require('browser')  -- nvimtree
 require('statusline') -- lualine
+require('treesitterconf') -- treesitter
+require('lspsettings') -- treesitter
 
 -- own config
 require('commands')  -- own commands
+
+
+-- Theme
+vim.cmd.colorscheme "codedark"

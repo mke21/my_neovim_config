@@ -13,45 +13,57 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	"nvim-tree/nvim-tree.lua",
-	"tomasiser/vim-code-dark",
-	"nvim-lualine/lualine.nvim",
-	"kyazdani42/nvim-web-devicons",
-	"tpope/vim-fugitive",
-	{'nvim-telescope/telescope.nvim', tag = '0.1.1',
-      dependencies = { 'nvim-lua/plenary.nvim' }},
-	{'nvim-lualine/lualine.nvim',
-      dependencies = { 'kyazdani42/nvim-web-devicons' }},
-	  "tpope/vim-sleuth",
-	  { -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      -- Automatically install LSPs to stdpath for neovim
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim',
+  "tomasiser/vim-code-dark",
+  "sainnhe/gruvbox-material",
+  "nvim-tree/nvim-tree.lua",
+  "nvim-lualine/lualine.nvim",
+  "kyazdani42/nvim-web-devicons",
+  "tpope/vim-fugitive",
+  {'nvim-telescope/telescope.nvim', tag = '0.1.1',
+  dependencies = { 'nvim-lua/plenary.nvim' }},
+  {'nvim-lualine/lualine.nvim',
+  dependencies = { 'kyazdani42/nvim-web-devicons' }},
+  "tpope/vim-sleuth",
+  { -- LSP Configuration & Plugins
+  'neovim/nvim-lspconfig',
+  dependencies = {
+    -- Automatically install LSPs to stdpath for neovim
+    { 'williamboman/mason.nvim', config = true },
+    'williamboman/mason-lspconfig.nvim',
 
-      -- Useful status updates for LSP
-      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+    -- Useful status updates for LSP
+    -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+    { 'j-hui/fidget.nvim', opts = {} },
 
-      -- Additional lua configuration, makes nvim stuff amazing!
-    },
+    -- Additional lua configuration, makes nvim stuff amazing!
+    'folke/neodev.nvim',
   },
-  { -- Autocompletion
-    'hrsh7th/nvim-cmp',
-    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+},
+{ -- Autocompletion
+'hrsh7th/nvim-cmp',
+dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   },
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
-    'lewis6991/gitsigns.nvim',
-    opts = {
-      -- See `:help gitsigns.txt`
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
+  'lewis6991/gitsigns.nvim',
+  opts = {
+    -- See `:help gitsigns.txt`
+    signs = {
+      add = { text = '+' },
+      change = { text = '~' },
+      delete = { text = '_' },
+      topdelete = { text = '‾' },
+      changedelete = { text = '~' },
     },
   },
+},
+-- "gc" to comment visual regions/lines
+{ 'numToStr/Comment.nvim', opts = {} },
+{ -- Highlight, edit, and navigate code
+    'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+    build = ":TSUpdate",
+  },
+  "github/copilot.vim"
 })
