@@ -5,7 +5,8 @@ local coms = vim.api.nvim_create_user_command
 coms(
 'Config', 
 function ()
-	require('telescope.builtin').find_files({cwd="~/.config/nvim"})
+    VIMCONFIG = vim.fn.fnamemodify(vim.fn.expand('$MYVIMRC'), ':h')
+    require('telescope.builtin').find_files({cwd=VIMCONFIG})
 end,
 {}
 )
