@@ -65,5 +65,6 @@ dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_l
     },
     build = ":TSUpdate",
   },
-  "github/copilot.vim"
+  "github/copilot.vim",
+  "akinsho/nvim-toggleterm.lua"
 })
