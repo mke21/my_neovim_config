@@ -27,4 +27,3 @@ require('terminal')  -- own commands
 
 -- Theme
 vim.cmd.colorscheme "codedark"
-
