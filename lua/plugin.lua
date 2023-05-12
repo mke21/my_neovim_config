@@ -13,6 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  "equalsraf/neovim-gui-shim",
   "tomasiser/vim-code-dark",
   "sainnhe/gruvbox-material",
   "nvim-tree/nvim-tree.lua",
