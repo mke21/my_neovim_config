@@ -22,8 +22,7 @@ require('lspsettings') -- treesitter
 
 -- own config
 require('commands')  -- own commands
-
 require('terminal')  -- own commands
+require("colors")    -- theme
 
--- Theme
-vim.cmd.colorscheme "codedark"
+

@@ -7,13 +7,14 @@ opt.number = true                -- bool: Show line numbers
 opt.relativenumber = true        -- bool: Show relative line numbers
 opt.scrolloff = 4                -- int:  Min num lines of context
 opt.signcolumn = "yes"           -- str:  Show the sign column
---opt.colorcolumn = '55555'
+opt.colorcolumn = '55555'
 opt.mouse = "a"                  -- str: enable mouse
 opt.clipboard = "unnamedplus"    -- str: sync clipboard with os
 
 -- [[ Filetypes ]]
 opt.encoding = 'utf8'            -- str:  String encoding to use
 opt.fileencoding = 'utf8'        -- str:  File encoding to use
+opt.cursorline = true            -- bool: Highlight current line
 
 -- [[ Theme ]]
 opt.syntax = "ON"                -- str:  Allow syntax highlighting

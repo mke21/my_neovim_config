@@ -14,8 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   "equalsraf/neovim-gui-shim",
-  "tomasiser/vim-code-dark",
-  "sainnhe/gruvbox-material",
+  "Mofiqul/vscode.nvim",
   "nvim-tree/nvim-tree.lua",
   "nvim-lualine/lualine.nvim",
   "kyazdani42/nvim-web-devicons",
