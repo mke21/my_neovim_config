@@ -52,3 +52,12 @@ vim.api.nvim_set_keymap('i', '<m-TAB>', 'v:lua.require\'copilot\'.Accept("<CR>")
 
 -- Set the Copilot no tab map option
 vim.g.copilot_no_tab_map = true
+if vim.fn.has("win32") == 1 then
+  print("windows")
+  vim.o.mouse = "a"
+  vim.api.nvim_set_keymap("v", "<LeftRelease>", "\"ygv\"", { noremap = true })
+  vim.api.nvim_set_keymap("n", "<C-x>", "<C-v>", { noremap = true })
+else
+  vim.o.mouse = "v" -- midle click paste with mouse
+end
+
