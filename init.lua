@@ -19,6 +19,7 @@ require('browser')  -- nvimtree
 require('statusline') -- lualine
 require('treesitterconf') -- treesitter
 require('lspsettings') -- treesitter
+require('pret')  -- prettier
 
 -- own config
 require('commands')  -- own commands
