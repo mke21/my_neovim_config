@@ -2,7 +2,7 @@
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'go', 'lua', 'python', 'tsx', 'typescript', 'vimdoc', 'vim', 'svelte' },
+  ensure_installed = { 'javascript', 'go', 'lua', 'python', 'tsx', 'typescript', 'vimdoc', 'vim', 'svelte' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
@@ -63,3 +63,19 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
+
+-- -- create a function that takes a name and a list of commands
+-- local function create_augroup(name, commands)
+--   -- use the api function to create an autocommand group
+--   vim.api.nvim_create_augroup(name, commands)
+-- end
+-- 
+-- -- create a list of commands for setting the filetype of .js files
+-- local filetype_js = {
+--   -- use the api function to run an Ex command
+--   -- this is equivalent to :autocmd BufRead,BufNewFile *.js set filetype=typescript
+--   vim.api.nvim_command("autocmd BufRead,BufNewFile *.js set filetype=typescript")
+-- }
+-- 
+-- -- call the function with the name and the list of commands
+-- create_augroup("FileTypeJS", filetype_js)

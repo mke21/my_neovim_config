@@ -1,6 +1,6 @@
 --[[ init.lua ]]
 --LEADER
-vim.g.mapleader = ";"
+vim.g.mapleader = " "
 vim.g.localleader = "\\"
 
 -- disable netrw

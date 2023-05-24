@@ -47,17 +47,21 @@ nkeymap('<m-p>', '<cmd>Telescope find_files<cr>')
 nkeymap('<m-g>', '<cmd>Telescope live_grep<cr>')
 nkeymap('<m-b>', '<cmd>Telescope buffers<cr>')
 
--- Map Ctrl-J in insert mode to accept Copilot suggestions
-vim.api.nvim_set_keymap('i', '<m-TAB>', 'v:lua.require\'copilot\'.Accept("<CR>")', {expr = true, silent = true})
 
 -- Set the Copilot no tab map option
+vim.g.copilot_assume_mapped = true
 vim.g.copilot_no_tab_map = true
+-- Map Ctrl-J in insert mode to accept Copilot suggestions
+vim.api.nvim_set_keymap('i', '<m-c>', 'copilot#Accept("<CR>")', {expr = true, silent = true})
+
 if vim.fn.has("win32") == 1 then
-  print("windows")
   vim.o.mouse = "a"
   vim.api.nvim_set_keymap("v", "<LeftRelease>", "\"ygv\"", { noremap = true })
   vim.api.nvim_set_keymap("n", "<C-x>", "<C-v>", { noremap = true })
 else
-  vim.o.mouse = "v" -- midle click paste with mouse
+  vim.o.mouse = "v" -- middle click paste with mouse
 end
 
+-- toggleterm
+-- nkeymap('<m-t>', '<cmd>ToggleTerm<CR>')
+-- keymap('i', '<m-t>', '<cmd>ToggleTerm<CR>', opts)
