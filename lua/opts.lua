@@ -43,3 +43,22 @@ opt.timeoutlen = 300
 -- [[ completion ]]
 opt.completeopt = "menuone,noselect"
 
+-- [[ Filetype specific ]]
+-- Set tabstop to 2 spaces for JavaScript files
+-- local function setFileTypeOptions()
+--     vim.api.nvim_exec([[
+--         augroup filetypedetect
+--             autocmd!
+--             autocmd BufNewFile,BufRead *.ts,*.js,*.html,*.css lua set_local_options()
+--         augroup END
+--     ]], false)
+-- end
+-- 
+-- local function setLocalOptions()
+--     vim.bo.tabstop = 2
+--     vim.bo.softtabstop = 2
+--     vim.bo.shiftwidth = 2
+-- end
+-- 
+-- setFileTypeOptions()
+

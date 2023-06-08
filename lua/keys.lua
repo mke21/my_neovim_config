@@ -33,6 +33,9 @@ nkeymap('<Right>', ':vertical resize +2<CR>' )
 
 -- zet directory van huidige buffer als werk
 nkeymap('<leader>cd', ':cd %:p:h<CR>:pwd<CR>')
+-- prettier
+nkeymap('<leader>p', ':Prettier<CR>')
+
 -- patch voor hertekenen van highlight
 nkeymap('<F12>', '<cmd>syntax sync fromstart<CR>')
 -- reload config
