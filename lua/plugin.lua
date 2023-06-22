@@ -14,12 +14,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   "equalsraf/neovim-gui-shim",
-  "Mofiqul/vscode.nvim",
-  "EdenEast/nightfox.nvim",
-  "nvim-tree/nvim-tree.lua",
-  "nvim-lualine/lualine.nvim",
-  "kyazdani42/nvim-web-devicons",
-  "tpope/vim-fugitive",
+  "Mofiqul/vscode.nvim", -- vscode theme
+  "EdenEast/nightfox.nvim", -- huidige theme
+  "nvim-tree/nvim-tree.lua", -- file explorer
+  "nvim-lualine/lualine.nvim", -- statusline
+  "kyazdani42/nvim-web-devicons", -- icons
+  "tpope/vim-fugitive", -- git
   {'nvim-telescope/telescope.nvim', tag = '0.1.1',
   dependencies = { 'nvim-lua/plenary.nvim' }},
   {'nvim-lualine/lualine.nvim',
