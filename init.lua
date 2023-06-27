@@ -26,4 +26,6 @@ require('commands')  -- own commands
 require('terminal')  -- own commands
 require("colors")    -- theme
 
-
+if vim.g.neovide then
+	vim.go.guifont = "SauceCodePro NF:h11"
+end 
