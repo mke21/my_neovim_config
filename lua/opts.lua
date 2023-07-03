@@ -44,6 +44,10 @@ opt.timeoutlen = 300
 opt.completeopt = "menuone,noselect"
 
 -- [[ Filetype specific ]]
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "javascript",
+	command = "setlocal ts=2 sw=2"})
+
 -- Set tabstop to 2 spaces for JavaScript files
 -- local function setFileTypeOptions()
 --     vim.api.nvim_exec([[

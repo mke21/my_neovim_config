@@ -12,18 +12,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
+local plugins = {
   "equalsraf/neovim-gui-shim",
-  "Mofiqul/vscode.nvim", -- vscode theme
-  "EdenEast/nightfox.nvim", -- huidige theme
+  {"EdenEast/nightfox.nvim", lazy=true}, -- huidige theme
   "nvim-tree/nvim-tree.lua", -- file explorer
-  "nvim-lualine/lualine.nvim", -- statusline
+  {'nvim-lualine/lualine.nvim',
+  dependencies = { 'kyazdani42/nvim-web-devicons' }},
   "kyazdani42/nvim-web-devicons", -- icons
   "tpope/vim-fugitive", -- git
   {'nvim-telescope/telescope.nvim', tag = '0.1.1',
   dependencies = { 'nvim-lua/plenary.nvim' }},
-  {'nvim-lualine/lualine.nvim',
-  dependencies = { 'kyazdani42/nvim-web-devicons' }},
   "tpope/vim-sleuth",
   { -- LSP Configuration & Plugins
   'neovim/nvim-lspconfig',
@@ -34,7 +32,7 @@ require("lazy").setup({
 
     -- Useful status updates for LSP
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-    { 'j-hui/fidget.nvim', opts = {} },
+    { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
 
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
@@ -68,7 +66,13 @@ dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_l
   },
   "github/copilot.vim",
   "akinsho/nvim-toggleterm.lua",
-  'manzeloth/live-server',
+  'mke21/live-server.nvim',
   'jose-elias-alvarez/null-ls.nvim',
   'MunifTanjim/prettier.nvim',
-})
+  'ixru/nvim-markdown',
+  -- 'plasticboy/vim-markdown',
+}
+
+local opts = {}
+
+require("lazy").setup(plugins, opts)
