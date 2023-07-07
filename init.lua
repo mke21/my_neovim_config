@@ -3,7 +3,8 @@
 vim.g.mapleader = " "
 vim.g.localleader = "\\"
 
--- disable netrw
+-- disable netrw (native neovim file explorer)
+-- we will use nvimtree instead
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
