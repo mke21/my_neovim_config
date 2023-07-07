@@ -53,3 +53,10 @@ Use cursor keys in command mode to resize the windows
 ## Git
 
 - `:Git` or `:G` to execute a git command
+
+## Neovide
+
+Special neovide settings for copy/paste
+
+- `<leader>c` copy from clipboard in visual mode
+- `<m-v>` paste from clipboard

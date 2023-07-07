@@ -44,11 +44,10 @@ opt.timeoutlen = 300
 opt.completeopt = "menuone,noselect"
 
 -- [[ Filetype specific ]]
-vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd("FileType", { -- set tabstop to 2 spaces in javascript files
 	pattern = "javascript",
 	command = "setlocal ts=2 sw=2"})
 
--- set maximum width of text to 80 characters in  markdown files
-vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd("FileType", { -- set maximum width of text to 80 characters in  markdown files
 	pattern = "markdown",
 	command = "setlocal textwidth=80"})

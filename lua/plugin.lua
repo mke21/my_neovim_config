@@ -69,16 +69,7 @@ dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_l
   'mke21/live-server.nvim',
   'jose-elias-alvarez/null-ls.nvim',
   'MunifTanjim/prettier.nvim',
-  -- 'ixru/nvim-markdown',
-  -- 'plasticboy/vim-markdown',
-  -- 'instant-markdown/vim-instant-markdown',
-  -- {
-  --  "ThePrimeagen/refactoring.nvim",
-  --  dependencies = {
-  --      {"nvim-lua/plenary.nvim"},
-  --      {"nvim-treesitter/nvim-treesitter"}
-  --  }
-  --}
+  'toppair/peek.nvim',
 }
 
 local opts = {}
