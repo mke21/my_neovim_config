@@ -48,21 +48,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "javascript",
 	command = "setlocal ts=2 sw=2"})
 
--- Set tabstop to 2 spaces for JavaScript files
--- local function setFileTypeOptions()
---     vim.api.nvim_exec([[
---         augroup filetypedetect
---             autocmd!
---             autocmd BufNewFile,BufRead *.ts,*.js,*.html,*.css lua set_local_options()
---         augroup END
---     ]], false)
--- end
--- 
--- local function setLocalOptions()
---     vim.bo.tabstop = 2
---     vim.bo.softtabstop = 2
---     vim.bo.shiftwidth = 2
--- end
--- 
--- setFileTypeOptions()
-
+-- set maximum width of text to 80 characters in  markdown files
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	command = "setlocal textwidth=80"})

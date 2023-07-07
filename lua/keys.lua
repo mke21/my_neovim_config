@@ -16,8 +16,8 @@ nkeymap('<c-l>', '<c-w>l')
 -- Buffer navigatie
 nkeymap('<c-right>', ':bn<CR>')
 nkeymap('<c-left>',  ':bp<CR>')
-nkeymap('<c-down>',  ':bd<CR>')
-nkeymap('<c-up>',    ':b<CR>')
+-- nkeymap('<c-down>',  ':bd<CR>')
+-- nkeymap('<c-up>',    ':b<CR>')
 
 -- tab navigatie
 nkeymap('<m-right>', ':tabnext<CR>')
