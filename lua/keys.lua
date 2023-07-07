@@ -38,8 +38,6 @@ nkeymap('<leader>p', ':Prettier<CR>')
 
 -- patch voor hertekenen van highlight
 nkeymap('<F12>', '<cmd>syntax sync fromstart<CR>')
--- reload config
-nkeymap('<m-r>', '<cmd>source $MYVIMRC<CR>')
 
 -- nvim-tree
 nkeymap('<c-n>', ':NvimTreeToggle<CR>')
@@ -57,11 +55,10 @@ vim.g.copilot_no_tab_map = true
 -- Map Ctrl-J in insert mode to accept Copilot suggestions
 vim.api.nvim_set_keymap('i', '<m-c>', 'copilot#Accept("<CR>")', {expr = true, silent = true})
 
--- if vim.fn.has("win32") == 1 then
---   vim.o.mouse = "a"
---   vim.api.nvim_set_keymap("v", "<LeftRelease>", "\"ygv\"", { noremap = true })
---   vim.api.nvim_set_keymap("n", "<C-x>", "<C-v>", { noremap = true })
--- else
---   vim.o.mouse = "v" -- middle click paste with mouse
--- end
-
+-- remap to open the Telescope refactoring menu in visual mode
+vim.api.nvim_set_keymap(
+	"v",
+	"<m-r>",
+	"<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+	{ noremap = true }
+)

@@ -11,4 +11,11 @@ end,
 {}
 )
 
+coms(
+  'BuffOnly',
+  function ()
+	vim.cmd(':%bd|e#|bd#')
+  end,
+  {}
+)
 

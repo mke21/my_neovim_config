@@ -20,6 +20,7 @@ require('statusline') -- lualine
 require('treesitterconf') -- treesitter
 require('lspsettings') -- treesitter
 require('pret')  -- prettier
+require('markdown')  -- markdown
 
 -- own config
 require('commands')  -- own commands
