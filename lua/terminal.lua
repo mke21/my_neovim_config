@@ -36,3 +36,9 @@ require("toggleterm").setup{
     }
   }
 }
+
+-- Map <Esc> to <C-\><C-n> in terminal mode
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
+
+-- Map <C-R> in terminal mode using an expression mapping
+vim.api.nvim_set_keymap('t', '<C-R>', '<C-\\><C-N>', { noremap = true, expr = true })

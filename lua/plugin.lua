@@ -66,7 +66,6 @@ dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_l
   },
   "github/copilot.vim",
   "akinsho/nvim-toggleterm.lua",
-  'mke21/live-server.nvim',
   'jose-elias-alvarez/null-ls.nvim',
   'MunifTanjim/prettier.nvim',
   'toppair/peek.nvim',

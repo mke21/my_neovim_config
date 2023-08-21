@@ -34,7 +34,13 @@ nkeymap('<Right>', ':vertical resize +2<CR>' )
 -- zet directory van huidige buffer als werk
 nkeymap('<leader>cd', ':cd %:p:h<CR>:pwd<CR>')
 -- prettier
-nkeymap('<leader>p', ':Prettier<CR>')
+nkeymap('<leader>pt', ':Prettier<CR>')
+
+-- toggle spellcheck
+nkeymap('<leader>sp', ':setlocal spell!<CR>')
+
+-- toggle highlight
+nkeymap('<leader>nh', ':noh<CR>')
 
 -- patch voor hertekenen van highlight
 nkeymap('<F12>', '<cmd>syntax sync fromstart<CR>')
@@ -47,6 +53,14 @@ nkeymap('<c-n>', ':NvimTreeToggle<CR>')
 nkeymap('<m-p>', '<cmd>Telescope find_files<cr>')
 nkeymap('<m-g>', '<cmd>Telescope live_grep<cr>')
 nkeymap('<m-b>', '<cmd>Telescope buffers<cr>')
+nkeymap('<leader>ff', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
+nkeymap('<leader>rr', '<cmd>Telescope lsp_references<cr>')
+
+-- lsp
+nkeymap('<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+nkeymap('<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+nkeymap('<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+nkeymap('<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 
 -- Set the Copilot no tab map option
