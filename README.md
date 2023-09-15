@@ -60,3 +60,14 @@ Special neovide settings for copy/paste
 
 - `<leader>c` copy from clipboard in visual mode
 - `<m-v>` paste from clipboard
+
+## Python
+
+There is a convenience command to activate a virtualenv in the current active
+directory. For this create a virtualenv in the root of your project: 
+
+`python -m venv venv` 
+
+and then run the command `Virtualenv` in neovim if your root directory is your
+active directory. The command will search for the directory 'venv' there to
+activate the virtualenv.
