@@ -61,6 +61,17 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  pylsp = {
+        pylsp = {
+            plugins = {
+                pylsp_mypy = {
+                    enabled = true,
+                    live_mode = false
+                }
+            }
+        }
+    },
+
 }
 
 -- Setup neovim lua configuration

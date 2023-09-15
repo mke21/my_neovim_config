@@ -15,12 +15,18 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   "equalsraf/neovim-gui-shim",
   {"EdenEast/nightfox.nvim", lazy=true}, -- huidige theme
+
   "nvim-tree/nvim-tree.lua", -- file explorer
+
   {'nvim-lualine/lualine.nvim',
   dependencies = { 'kyazdani42/nvim-web-devicons' }},
+
   "kyazdani42/nvim-web-devicons", -- icons
+
   "tpope/vim-fugitive", -- git
+
   {'nvim-telescope/telescope.nvim', tag = '0.1.1',
+
   dependencies = { 'nvim-lua/plenary.nvim' }},
   "tpope/vim-sleuth",
   { -- LSP Configuration & Plugins
@@ -63,6 +69,16 @@ dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_l
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ":TSUpdate",
+  },
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("refactoring").setup()
+    end,
   },
   "github/copilot.vim",
   "akinsho/nvim-toggleterm.lua",
