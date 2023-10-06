@@ -80,11 +80,13 @@ dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_l
       require("refactoring").setup()
     end,
   },
-  "github/copilot.vim",
-  "akinsho/nvim-toggleterm.lua",
+  'github/copilot.vim',
+  'akinsho/nvim-toggleterm.lua',
   'jose-elias-alvarez/null-ls.nvim',
   'MunifTanjim/prettier.nvim',
   'toppair/peek.nvim',
+  'NvChad/nvim-colorizer.lua',
+
 }
 
 local opts = {}

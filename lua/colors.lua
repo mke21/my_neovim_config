@@ -12,3 +12,6 @@ require('nightfox').setup({
   }
 })
 vim.cmd("colorscheme carbonfox")
+
+require 'colorizer'.setup();
+
