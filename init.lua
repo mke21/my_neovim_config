@@ -22,8 +22,8 @@ require('treesitterconf') -- treesitter
 require('lspsettings') -- treesitter
 require('pret')  -- prettier
 require('markdown')  -- markdown
-
--- own config
+-- 
+-- -- own config
 require('commands')  -- own commands
 require('terminal')  -- own commands
 require("colors")    -- theme

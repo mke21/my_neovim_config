@@ -86,6 +86,9 @@ dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_l
   'MunifTanjim/prettier.nvim',
   'toppair/peek.nvim',
   'NvChad/nvim-colorizer.lua',
+  'folke/which-key.nvim',
+  'mfussenegger/nvim-dap',
+  'mxsdev/nvim-dap-vscode-js',
 
 }
 

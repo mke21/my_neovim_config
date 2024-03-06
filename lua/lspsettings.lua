@@ -67,6 +67,9 @@ local servers = {
                 pylsp_mypy = {
                     enabled = true,
                     live_mode = false
+                },
+                pycodestyle = {
+                    maxLineLength = 100
                 }
             }
         }
